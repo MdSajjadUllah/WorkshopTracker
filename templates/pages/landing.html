@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/landing.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="hero-section">
+    <div class="container hero-content">
+        <div class="hero-text">
+            <h1>TRACK YOUR WORKSHOP'S DAILY SALES WITH EASE</h1>
+            <p>Stay organized, monitor daily performance, and grow your business with our simple and powerful tracking tool!</p>
+            <div class="hero-buttons">
+                <a href="{% url 'signup' %}" class="btn btn-primary">Sign up</a>
+                <a href="{% url 'signin' %}" class="btn btn-secondary">Sign In</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="{% static 'img/illus.png' %}" alt="A man holding a tablet with daily sales data">
+        </div>
+    </div>
+</section>
+
+<section id="about-us" class="about-us-section">
+    <div class="container">
+        <h2>About Us</h2>
+        <p class="section-description">We understand the hustle behind every sale. That's why we created a platform where you can upload your work, track daily sales, monitor performance, and stay focused on growing your workshop.</p>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="icon">
+                    <img src="{% static 'img/mission.png' %}" alt="Our Mission">
+                </div>
+                <h3>Our Mission</h3>
+                <p>To empower small and mid-size workshops to take effective steps and reduce the complexity of record keeping. We aim to replace complicated software with a simple, easy to use solution.</p>
+            </div>
+            <div class="feature-item">
+                <div class="icon">
+                    <img src="{% static 'img/choose.png' %}" alt="Why Choose Us">
+                </div>
+                <h3>Why Choose Us</h3>
+                <ul>
+                    <li><span class="checkmark">✔</span> Cost-effective and tailored</li>
+                    <li><span class="checkmark">✔</span> Mobile-friendly access</li>
+                    <li><span class="checkmark">✔</span> All the necessary tools and information you need to succeed</li>
+                </ul>
+            </div>
+            <div class="feature-item">
+                <div class="icon">
+                    <img src="{% static 'img/time.png' %}" alt="Time Saver">
+                </div>
+                <h3>Time-Saver</h3>
+                <p>Reduce paperwork and focus on growing your business with automated tracking.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact-us" class="contact-us-section">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p class="section-description">Have questions about WorkshopTracker? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+        <div class="contact-form-container">
+            <h3>Send us a message</h3>
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <input type="text" name="user_name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" name="user_email" placeholder="Your Email" required>
+              </div>
+              <div class="form-group">
+                <textarea name="message" placeholder="Message" required></textarea>
+              </div>
+                <button type="submit" class="btn btn-submit">Submit</button>
+            </form>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

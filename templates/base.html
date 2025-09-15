@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}WorkshopTracker{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/landing.css' %}">
+
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+    <a href="{% url 'landing' %}">
+        <img src="{% static 'img/workshop.png' %}" alt="WorkshopTracker Logo">
+    </a>
+</div>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="{% url 'landing' %}">Home</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+    <a href="{% url 'landing' %}">
+        <img src="{% static 'img/workshop.png' %}" alt="WorkshopTracker Logo">
+    </a>
+</div>
+
+            <div class="footer-social-media">
+               <a href="https://www.linkedin.com/in/md-sajjad-ullah-1b1a0a213?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+  <img src="{% static 'img/linkedin.png' %}" alt="LinkedIn">
+</a>
+<a href="https://github.com/mdsajjadullah" target="_blank">
+  <img src="{% static 'img/github.png' %}" alt="GitHub">
+</a>
+<a href="https://www.instagram.com/fahimm_06_?igsh=MTk1OHd1YTViM2lpYQ%3D%3D&utm_source=qr" target="_blank">
+  <img src="{% static 'img/instagram.png' %}" alt="Instagram">
+</a>
+
+            </div>
+            <div class="footer-info">
+                <p>Email: 22201229@uap-bd.edu</p>
+                <p>Phone: +8801XXXXXXXXX</p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>© WorkshopTracker 2025</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="{% static 'js/email.js' %}"></script>
+
+</body>
+</html>

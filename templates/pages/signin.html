@@ -1,0 +1,32 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/signin.css' %}">
+
+{% block content %}
+<div class="auth-page-container">
+    
+    <div class="auth-logo-section">
+        <a href="{% url 'landing' %}">
+            <img src="{% static 'img/workshop.png' %}" alt="WorkshopTracker Logo" class="auth-logo">
+        </a>
+    </div>
+
+    
+    <div class="auth-card-container">
+        <form method="post">
+            <h2>Login</h2>
+            {% csrf_token %}
+            {{ form.as_p }}
+
+           <!-- <div class="auth-extra">
+                <a href="{ url 'password_reset' %}">Forgot your password?</a>
+            </div>  -->
+
+            <button type="submit">Login</button>
+        </form>
+
+        <div class="auth-link">
+            Don’t have an Account, <a href="{% url 'signup' %}">Register</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
